@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+			<title>Login | Azana</title>
+			
+						<!-- Core Bootstrap -->
+			<link rel="stylesheet" href="css/bootstrap.min.css">
+						<!-- Core Responsive -->
+			<meta name="viewport" content="width=device-width,initial-scale=1.0">
+						<!-- Core Author -->
+			<meta name="author" content="Jimmy GUBETEKA">
+			<link rel="stylesheet" type="text/css" href="css/connexion-flow.css" />
+	</head>
+  <body>
+	  <div class="container hidden-lg">
+		<div class='row'>
+						<img src="icon/logo.png" alt="Azana" id='logo'  class="col-xs-6">
+		</div>
+		<form action="auth" method="POST" class="formulaire">
+			<legend>Login</legend>
+		<div class="form-group">
+			<input type="text" name="username" required="required" class="form-control" placeholder="Entrer votre identifiant" autofocus />
+		</div>
+		<div class="form-group">	
+			<input type="password" name="password" required="required" class="form-control" placeholder="mot de passe" />
+		</div>
+		<div class="form-group">
+			<button type="submit" data-toggle="modal" href="#login" class="btn btn-primary btn-lg btn-group btn-group-justified pull-right">Se connecter</button>
+		</div>
+		</form>
+		<div id="message" style="color:red"></div>
+	  </div>
+	  <div class="container login-form hidden-md hidden-xs hidden-sm">
+		<img src="images/fmoney262x206.png" />
+		<form action="auth" method="POST">
+			<input type="text" name="username" placeholder="Username" required autofocus />
+			<input type="password" name="password" placeholder="Password" required />
+			<input type="submit" value='Connexion' />
+		</form>
+		<div id="message" style="color:red"></div>
+	  </div>
+		<div class="alert">
+			<h4>Erreur !</h4>Identifiant ou Mot de passe incorrect!
+		</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$(function(){
+			<% if(a.length != 0){%>
+				$('div.alert').show('slow').delay(4000).hide('slow').delay(500);
+					//alert('adresse email : <%= a %> déjà utilisé');
+			<% } %>
+		});
+	</script>
+  </body>
+</html>

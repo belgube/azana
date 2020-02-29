@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+						<!-- Title -->
+		<title>Habitation Menu | Azana</title>
+						<!-- Device Scale -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Jimmy GUBETEKA">
+		<meta charset="utf-8 /">
+						<!-- Core Bootstrap -->
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+						<!-- Font Awesome -->
+		<link rel="stylesheet" href="../css/font-awesome.min.css">
+						<!-- Core Css By Jimmy GUBETEKA-->
+		<style type="text/css">
+			body{
+				padding-top: 10px; 
+				overflow : scroll;
+				background-color : #f3f3f3;
+				position : absolute;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.btn-group{ 
+				position : fixed;
+				bottom: -10px;
+				right: 0;
+				left: 0;
+				z-index: 1030;
+			}
+			.ensemble{
+				position : fixed;
+				top : -10px;
+				right: 0;
+				left: 0;
+				text-align:center;
+				background-color: #FBB03B;
+				border-color : #FBB03B;
+				z-index: 2;
+			}
+			h4{
+				color:white;
+				padding:10px;
+				margin-left : 20%;
+			}
+			#nvcpt{
+				color:white;
+				padding:10px;
+				text-align:center;
+				margin-left : auto;
+			}
+			form{ 
+				position: relative;
+				top : 80px;
+				z-index:1;
+			}
+			#form{
+				top : 50%;
+			}
+				img{
+					position : absolute;
+					left : 70%;
+					top : 65px;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="ensemble navbar navbar-inverse">
+				<h4 id='nvcpt'>
+					<span data-toggle="modal" data-target="#services" href="#services" class='glyphicon glyphicon-list pull-left'></span></a>Votre assurance en quelques clics
+							<a href='/log-out/' style='color:white'><span class='glyphicon glyphicon-off pull-right' ></span></a><br>Quelque soit votre profil !
+				</h4>
+			</div>
+			
+								<!-- Body Content Mobile-->
+						
+					<div>
+						<image src='../icon/309113.svg' class='img-circle hidden-lg col-xs-3 img-responsive'></image><br><br><br><br>
+						<img src='../icon/309113.svg' style="position:relative;left: 1px;" class='img-responsive img-circle col-md-3 hidden-xs hidden-sm hidden-md' />
+					</div>
+					<form action="/dflat/" class="formulaire hidden-lg" method='post'>
+						<div class="form-group">
+							Vous êtes :<select name='sexe' id='sexe' class='form-control'>
+								<option value='Homme'>Un Homme</option>
+								<option value='Femme'>Une Femme</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="text">Saisie</label>
+							<input id="identite" name='identite' type="text" class="form-control" required='required' placeholder="Saisir votre nom au complet" autofocus />
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="text">Saisie</label>
+							Votre date de naissance<input id="dateNaiss" name='dateNaiss' type="date" class="form-control" required='required' >
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="text">Saisie</label>
+							<input id="adresse" name='adresse' type="text" class="form-control" required='required' placeholder="Votre addresse de résidence" />
+						</div>
+						<div class="form-group">
+							Type d'habitation<select name='logement' id='logement' class="form-control" >
+								<option value='appartement'>Appartement</option>
+								<option value='maison'>Maison</option>
+							</select>
+						</div>
+						<div class="form-group">
+							Vous êtes :<select name='choix' id='choix2' class='form-control'>
+								<option value='locataire'>Locataire</option>
+								<option value='proprio'>Propriétaire </option>
+								<option value='coproprio'> Copropriétaire Occupant</option>
+							</select>
+						</div>
+						<div class="form-group">
+							Habitez-vous déjà ce logement? :<select name='possession' id='possession' class='form-control'>
+								<option value='oui'>Oui</option>
+								<option value='non'>Non, pas encore</option>
+							</select>
+						</div>
+						<ul class="pager">
+							<li><button id='submit' class="btn btn-default" type='submit'>Envoyer <i class="fa fa-arrow-circle-right"></i></button></li>
+						</ul>
+											
+					</form>
+								<!-- Body Content desktop -->
+
+					<form class="formulaire col-lg-8 hidden-xs hidden-sm hidden-md" id="form" method='post'>
+						<div class="form-group">
+							Sexe :<select name='sexe' id='choix2' class='form-control'>
+								<option value='Homme'>Un Homme</option>
+								<option value='Femme'>Une Femme</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="text">Saisie</label>
+							Votre nom<input id="identite" name='identite' type="text" class="form-control" required='required' placeholder="Saisir votre nom au complet" autofocus="" />
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="text">Saisie</label>
+							Adresse<input id="adresse" name='adresse' type="text" class="form-control" required='required' placeholder="Votre addresse de résidence" />
+						</div>
+						<div class="form-group">
+							<label class="sr-only" for="text">Saisie</label>
+							Votre date de naissance<input id="jour" name='date' type="date" class="form-control" required='required' placeholder="A partir de quel jour voulez-vous être assuré">
+						</div>
+						<div class="form-group">
+							Situation maritale :<select name='statut' id='statut' class='form-control'>
+								<option value='C'>Célibataire</option>
+								<option value='M'>Marié(e)</option>
+								<option value='D'>Divorcé(e)</option>
+								<option value='D'>Séparé(e)</option>
+								<option value='V'>Veuf(ve)</option>
+							</select>
+						</div>
+						<div class="form-group">
+							Type d'habitation<select name='choix' id='logement' class="form-control" >
+								<option value='appartement'>Appartement</option>
+								<option value='maison'>Maison</option>
+							</select>
+						</div>
+						<div class="form-group">
+							Habitez-vous déjà ce logement? :<select name='sexe' id='choix2' class='form-control'>
+								<option value='oui'>Oui</option>
+								<option value='non'>Non, pas encore</option>
+							</select>
+						</div>
+						<ul class="pager">
+							<li><button id='submit' class="btn btn-default" type='submit'>Envoyer <i class="fa fa-arrow-circle-right"></i></button></li>
+						</ul>
+											
+					</form>
+							<!-- link of services /services menus -->
+					<div class="modal" id="services">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" data-dismiss="modal" class="close" style="color:red">x</button>
+									<h4 class="modal-title" style='color:black'>Nos Services</h4>
+								</div>
+								<div class="modal-body">
+									<section class="section">
+										<a href="/devis/logis">
+											<i class="fa fa-home"> Assurance Habitation</i><br />
+										</a>
+										<a href="/devis/auto">
+											<i class="fa fa-automobile"> Assurance Voiture</i><br />
+										</a>
+										<a href="/devis/moto">
+											<i class="fa fa-motorcycle"> Assurance Moto</i><br />
+										</a>
+										<a href="/devis/sante">
+											<i class="fa fa-ambulance"> Santé et Prévoyance</i><br />
+										</a>
+										<a href="/devis/voyages">
+											<i class="fa fa-plane"> Voyage et loisirs</i><br />
+										</a>
+										<a href="/devis/professionnal">
+											<span class="glyphicon glyphicon-briefcase"> Professionnels</span><br />
+										</a>
+										<a href="/devis/entreprises">
+											<i class="fa fa-university"> Entreprises</i><br />
+										</a>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+									<!-- link of infos /contact footer -->
+					<div class="modal" id="infos">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" data-dismiss="modal" class="close" style="color:red">x</button>
+									<h4 style='color:black' class="modal-title">Nous Contacter</h4>
+								</div>
+								<div class="modal-body">
+									<footer class="footer">
+										<address>
+											1527, Colonel Ebeya<br />C/Gombe
+										</address>
+										Service client<br /><span class="glyphicon glyphicon-earphone">243-844-775-892</span><br />
+										
+										<a href="mailto:jimmygubeteka@yahoo.fr">Par mail : Service Client</a>
+									</footer>
+								</div>
+							</div>
+						</div>
+					</div>
+								
+											<!-- footer -->			
+					<div class="row">
+							<div class="col-xs-* col-sm-*">
+								<div class="btn-group btn-group-justified">
+								<a href="notifier.html" class="btn btn-primary"><i class="fa fa-bell-o"><br />Notification</i></a>
+									<a data-toggle="modal" data-target="#infos" href="#infos" class="btn btn-primary"><span class="glyphicon glyphicon-map-marker"><br>Agences</span></a>
+								</div>
+							</div>							
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	</body>
+</html>

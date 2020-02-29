@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+						<!-- Title -->
+		<title>Nouveau Compte | Azana</title>
+						<!-- Device Scale -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8 /">
+						<!-- Core Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+						<!-- Font Awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+						<!-- Core Css By Jimmy GUBETEKA-->
+		<link rel="stylesheet" href="css/nouveaucompte.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="ensemble navbar navbar-inverse">
+				<h4 class="hidden-lg" id="h1">
+					<a href='/'><span class='glyphicon glyphicon-arrow-left'></span></a> NOUVEAU COMPTE
+				</h4>
+				<h4 class="hidden-xs hidden-sm hidden-md" id="h2">
+					<a href='/'><span class='glyphicon glyphicon-arrow-left pull-left'></span></a> <div style="padding-left: 30%; margin: auto;">NOUVEAU COMPTE</div>
+				</h4>
+			</div>
+			<div>
+				<image src='images/user-u2519-fr5.png' id='ImgNam' class='img-circle img-responsive hidden-lg'></image>
+				<image src='images/user-u2519-fr5.png' id='ImgNam1' class='img-circle img-responsive hidden-xs hidden-sm hidden-md'></image>
+			</div>
+			<form class="formulaire" id='form' method='post' action='regazana'>
+			<legend id='insermail'>Inserer l'e-mail que vous<br />utiliserez pour vous connecter</legend>
+				<div class="form-group">
+					<label class="sr-only" for="text">Saisie</label>
+					Votre adresse e-mail<input id="email" type="email" name='email' class="form-control" required='required' autofocus placeholder="Inserez votre adresse e-mail">
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="text">Saisie</label>
+					Votre noms<input id="email" type="text" name='identite' class="form-control" required='required' autofocus placeholder="ex: Jimmy GUBETEKA">
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="text">Saisie</label>
+					Téléphone<input id="phone" name='phone' type="tel" class="form-control" required='required' placeholder="Numéro de téléphone">
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="text">Saisie</label>
+					Mot de passe<input id="mot de passe" name='pass' type="password" class="form-control" required='required' placeholder="Votre mot de passe">
+				</div>
+				<ul class="pager">
+					<li><button id='submit' class="btn btn-default" type='submit'>S'inscrire <i class="fa fa-arrow-circle-right"></i></button></li>
+					<div class="alert alert-block alert-danger" style="display:none">
+						<h4>Erreur !</h4>Adresse email déjà utilisé !
+					</div>
+				</ul>
+				
+			</form>
+			
+			<div class="footer navbar navbar-inverse navbar-fixed-bottom">
+				<h4 style="text-align: center;color:white" class="hidden-xs">
+					© 2020 Azana votre solution d'assurance électronique - Un produit de <a href="http://belgube.com">belgube</a>
+				</h4>
+					<!--- Mobile's footer-->
+				<h4 style="text-align: center;color:white" class="hidden-lg hidden-sm hidden-md">
+					&copy 2020 Azana Assurance
+				</h4>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$(function(){
+			<% if(i.length > 0){%>
+				$('div.alert').show('slow').delay(4000).hide('slow').delay(500);
+					//alert('adresse email : <%= i %> déjà utilisé');
+			<% } %>
+		});
+	</script>
+	</body>
+</html>
