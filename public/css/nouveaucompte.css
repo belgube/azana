@@ -1,0 +1,66 @@
+
+			body{
+				padding : 15px;
+				background-color : #f3f3f3;
+				background-size: cover;
+			}
+			#form{ 
+				position: relative;
+				top : 118px;
+			}
+			#dejacompte{
+				padding:20px;
+				position : relative;
+				bottom : -170px;
+				text-align:center;
+				margin-left : 30%;
+			}
+			#next{position:relative;margin-left:40%;}
+			#ImgNam{
+				position : absolute;
+				right : 9px;
+				border-radius: 5px 10px 0 15px;
+				top : 75px;
+				border:2px solid gray;
+				z-index:1;
+			}
+			#ImgNam1{
+				position : absolute;
+				right : 10%;
+				border-radius: 5px 10px 0 15px;
+				top : 75px;
+				border:2px solid gray;
+				z-index:1;
+			}
+			.ensemble{
+				position : fixed;
+				top : -10px;
+				right: 0;
+				left: 0;
+				background-color: #FBB03B;
+				border-color : #FBB03B;
+				color:white;
+			}
+			#nvcpt{
+				margin: auto;
+			}
+			p{
+				padding-top:50%;
+				position : relative;
+			}
+			#h1, #h2{
+				color:white;
+				padding:10px;
+				margin-left : 20%;
+			}
+			img{
+				position : fixed;
+				margin-left : 30%;
+			}
+			.footer{
+				position : fixed;
+				bottom: -10px;
+				right: 0;
+				left: 0;
+				z-index: 1030;
+			}
